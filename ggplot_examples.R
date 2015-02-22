@@ -68,8 +68,10 @@ display.brewer.all()
 
 #this takes data in multiple columns and puts them all into one column in dataset called df
 df <- melt(iris, id.vars = "Species")
+
 #plot bar graph with each variable as a function of species, dodge puts them side by side instead of stacked
 ggplot(df, aes(Species, value, fill = variable)) + geom_bar(stat = "identity", position = "dodge") + scale_fill_brewer(palette = "Set1")
+
 
 
 
